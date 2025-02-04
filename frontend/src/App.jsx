@@ -1,11 +1,11 @@
 import Login from "./components/pages/login"
+import Navbar from "./components/pages/navBar"
 import { Button } from "./components/ui/button"
 
 function App() {
 
   return (
-    
-    <div>hello</div>
+    <Navbar></Navbar>
   )
 }
 

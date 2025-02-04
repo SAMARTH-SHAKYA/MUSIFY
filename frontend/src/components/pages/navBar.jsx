@@ -1,8 +1,8 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Search, Music } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-export default function Navbar() {
+const Navbar = () => {
   const [searchQuery, setSearchQuery] = useState("");
 
   return (
@@ -10,7 +10,7 @@ export default function Navbar() {
       {/* Left Side */}
       <div className="flex items-center gap-4">
         <a href="/" className="flex items-center gap-2 text-lg font-semibold">
-          <Music size={24} /> Home
+          <Music size={24} /> Musify
         </a>
         <div className="relative">
           <input
@@ -26,11 +26,11 @@ export default function Navbar() {
 
       {/* Right Side */}
       <div className="flex gap-3">
-        <Button variant="outline" className="border border-gray-600">
-          Login
-        </Button>
+        <Button className="bg-blue-600 hover:bg-blue-700">Login</Button>
         <Button className="bg-blue-600 hover:bg-blue-700">Sign Up</Button>
       </div>
     </nav>
   );
-}
+};
+
+export default Navbar;
