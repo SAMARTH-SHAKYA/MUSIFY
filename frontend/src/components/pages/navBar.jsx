@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { Search, Music } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState("");
 
   return (
@@ -26,7 +28,7 @@ const Navbar = () => {
 
       {/* Right Side */}
       <div className="flex gap-3">
-        <Button className="bg-blue-600 hover:bg-blue-700">Login</Button>
+        <Button className="bg-blue-600 hover:bg-blue-700" onClick={()=>{navigate("/login")}}>Login</Button>
         <Button className="bg-blue-600 hover:bg-blue-700">Sign Up</Button>
       </div>
     </nav>
